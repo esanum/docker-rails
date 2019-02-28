@@ -6,15 +6,6 @@
 # travis env set DOCKER_PASSWORD secretsecret
 language: shell
 
-env:
-  # Path to 'hadolint' binary
-  HADOLINT: "${HOME}/hadolint"
-
-install:
-  - curl -sL -o ${HADOLINT} "https://github.com/hadolint/hadolint/releases/download/v1.16.0/hadolint-$(uname -s)-$(uname -m)"
-    && chmod 700 ${HADOLINT}
-
 script:
-  - ${HADOLINT} Dockerfile
   - docker build . -t esanumeventapp/ruby-mysql
   - docker push esanumeventapp/ruby-mysql:latest
