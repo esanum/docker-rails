@@ -18,6 +18,6 @@ install:
     && chmod 700 ${HADOLINT}
 
 script:
-  - hadolint Dockerfile
+  - ${HADOLINT} Dockerfile
   - docker build . -t esanumeventapp/ruby-mysql
   - docker push esanumeventapp/ruby-mysql:latest
