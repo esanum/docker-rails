@@ -6,9 +6,6 @@
 # travis env set DOCKER_PASSWORD secretsecret
 language: shell
 
-services:
-  - docker
-
 env:
   # Path to 'hadolint' binary
   HADOLINT: "${HOME}/hadolint"
