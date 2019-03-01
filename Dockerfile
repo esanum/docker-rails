@@ -18,7 +18,8 @@ RUN apk --update --no-cache add \
   # We do this because rmagick doesn't support imagemagick 7
   imagemagick=6.9.6.8-r1 \
   imagemagick-dev=6.9.6.8-r1 \
-  tzdata
+  tzdata \
+  openssh-client
 
 # Install phantomjs for alpine
 RUN apk --no-cache add npm
