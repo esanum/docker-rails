@@ -1,4 +1,4 @@
-FROM ruby:2.5-alpine
+FROM ruby:2.5-alpine3.8
 
 # We do this because rmagick doesn't support imagemagick 7
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.5/main' >> /etc/apk/repositories
