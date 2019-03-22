@@ -10,3 +10,10 @@ script:
   - docker build . -t esanumeventapp/ruby-mysql
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push esanumeventapp/ruby-mysql:latest
+
+notifications:
+  email: false
+  slack: esanum:XFAkvhriKLtaV89LA5CUnSEN
+  on_success: never
+  on_failure: always
+  notify: true
