@@ -14,6 +14,6 @@ script:
 notifications:
   email: false
   slack: esanum:XFAkvhriKLtaV89LA5CUnSEN
-  on_success: never
+  on_success: change
   on_failure: always
   notify: true
